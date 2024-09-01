@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmWise Crop Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Custom CSS styles */
+        #navbar {
+            background-color: #c8e5c9;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 60px; /* Adjust based on your desired height */
+            border-bottom: 2px solid #1B5E20; /* Optional: Add a border */
+        }
+
+        #logo {
+            width: 200px;
+            color: green;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #logo:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        .landing-content {
+            text-align: center;
+            margin-top: 100px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .landing-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #1B5E20; /* Darker Green */
+        }
+
+        .landing-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #1B5E20; /* Darker Green */
+        }
+
+        .landing-content .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 12px 24px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .landing-content .btn:hover {
+            background-color: #66BB6A;
+            border-color: #66BB6A;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .features {
+            background-color: #E8F5E9;
+            padding: 50px 0;
+        }
+
+        .feature {
+            margin-bottom: 40px;
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1B5E20; /* Darker Green */
+        }
+
+        .feature p {
+            font-size: 1.2rem;
+            color: #1B5E20; /* Darker Green */
+        }
+
+        .feature img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Animation */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #E8F5E9;color:#1B5E20;">
+
+    <div id="navbar">
+        <div id="logo">
+            <h2 class="text-2xl font-bold">FarmWise</h2>
+        </div>
+    </div>
+
+    <div class="landing-content">
+        <h1>Analyze Crop Health with FarmWise</h1>
+        <p>Upload an image of your crops, and we'll help you detect potential diseases or confirm a healthy harvest.</p>
+        <a href="login" class="btn">
+            Get Started
+        </a>
+    </div>
+
+    <div class="features">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold mb-8">How FarmWise Helps Farmers</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="feature flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Crop Analysis Icon">
+                    <h2 class="text-2xl font-semibold">Instant Crop Health Analysis</h2>
+                    <p>FarmWise can instantly analyze crop images to determine if they are healthy or show signs of disease.</p>
+                </div>
+                <div class="feature flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Disease Detection Icon">
+                    <h2 class="text-2xl font-semibold">Disease Detection</h2>
+                    <p>Our model identifies common crop diseases, providing insights and recommended treatments to help you take action quickly.</p>
+                </div>
+                <div class="feature flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Freshness Detection Icon">
+                    <h2 class="text-2xl font-semibold">Fresh Leaf Detection</h2>
+                    <p>Upload an image to confirm if your crops are in top condition, ready for harvest or sale.</p>
+                </div>
+                <div class="feature flex flex-col items-center">
+                    <img src="https://via.placeholder.com/150" alt="Farmer Support Icon">
+                    <h2 class="text-2xl font-semibold">Empowering Farmers</h2>
+                    <p>FarmWise helps farmers make informed decisions, improve crop health, and maximize yield.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container mx-auto">
+            <p>Contact us:</p>
+            <p>Email: info@farmwise.com</p>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Address: 123 Farming Street, AgriCity, Country</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
